@@ -1,0 +1,402 @@
+.container {
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 900;
+  color: #040055;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  margin: 0;
+}
+
+.subtitle {
+  color: #9ca3af;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 4px 0 0;
+}
+
+.subtitleAccent {
+  color: #f59e0b;
+  font-weight: 700;
+}
+
+.loadingBox {
+  background: #fff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 0;
+  box-shadow: 0px 2px 12px rgba(4,0,85,0.05);
+}
+
+.loadingText {
+  color: #9ca3af;
+  font-size: 14px;
+  margin: 0;
+}
+
+.listCard {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 2px 12px rgba(4,0,85,0.05);
+  overflow: hidden;
+}
+
+.listHeader {
+  padding: 16px 24px;
+  border-bottom: 1px solid #f9fafb;
+}
+
+.listTitle {
+  font-size: 15px;
+  font-weight: 900;
+  color: #040055;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.listBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 24px;
+  border-bottom: 1px solid #f9fafb;
+  transition: background 0.2s;
+}
+
+.row:hover {
+  background: rgba(249,250,251,0.6);
+}
+
+.rowInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.rowTitle {
+  font-weight: 700;
+  font-size: 15px;
+  color: #040055;
+  margin: 0;
+}
+
+.rowMeta {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 2px 0 0;
+}
+
+.rowActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.btnPreview {
+  border: 1px solid #e5e7eb;
+  background: transparent;
+  color: #6b7280;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btnPreview:hover {
+  border-color: #c4b5fd;
+  color: #8b5cf6;
+}
+
+.btnApprove {
+  background: #ecfdf5;
+  color: #059669;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btnApprove:hover {
+  background: #d1fae5;
+}
+
+.btnReject {
+  background: #fef2f2;
+  color: #ef4444;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btnReject:hover {
+  background: #fee2e2;
+}
+
+.emptyState {
+  background: #fff;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 0;
+  text-align: center;
+  box-shadow: 0px 2px 12px rgba(4,0,85,0.05);
+}
+
+.emptyTitle {
+  font-weight: 900;
+  font-size: 18px;
+  color: #040055;
+  margin: 12px 0 0;
+}
+
+.emptySubtitle {
+  color: #9ca3af;
+  font-size: 14px;
+  margin: 4px 0 0;
+}
+
+/* Modal overlay */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+}
+
+.modalContent {
+  background: #fff;
+  border-radius: 24px;
+  padding: 32px;
+  max-width: 520px;
+  width: 100%;
+  margin: 0 16px;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+}
+
+.previewImgBox {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  background: linear-gradient(to bottom, #f0f4f8, #e8edf5);
+  overflow: hidden;
+}
+
+.previewImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all 0.3s;
+}
+
+.sideToggle {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.sideBtn {
+  width: 64px;
+  height: 80px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+  opacity: 0.6;
+  cursor: pointer;
+  padding: 0;
+}
+
+.sideBtn:hover {
+  opacity: 1;
+}
+
+.sideBtnActive {
+  composes: sideBtn;
+  border-color: #1890ff;
+  opacity: 1;
+}
+
+.sideImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #f0f4f8;
+}
+
+.previewTitle {
+  font-size: 22px;
+  font-weight: 900;
+  color: #040055;
+  margin: 0;
+}
+
+.previewMeta {
+  color: #9ca3af;
+  font-size: 14px;
+  margin: 4px 0 0;
+}
+
+.previewActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.btnApproveLg {
+  flex: 1;
+  padding: 12px 0;
+  border-radius: 14px;
+  background: #10b981;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btnApproveLg:hover {
+  background: #059669;
+}
+
+.btnRejectLg {
+  flex: 1;
+  padding: 12px 0;
+  border-radius: 14px;
+  background: #fee2e2;
+  color: #ef4444;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btnRejectLg:hover {
+  background: #fecaca;
+}
+
+/* Reject reason modal */
+.rejectModalContent {
+  background: #fff;
+  border-radius: 24px;
+  padding: 32px;
+  max-width: 420px;
+  width: 100%;
+  margin: 0 16px;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+}
+
+.rejectTitle {
+  font-size: 20px;
+  font-weight: 900;
+  color: #040055;
+  margin: 0 0 8px;
+}
+
+.rejectSubtitle {
+  color: #9ca3af;
+  font-size: 13px;
+  margin: 0 0 16px;
+}
+
+.rejectTextarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: #f8f9fb;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  outline: none;
+  font-size: 14px;
+  color: #040055;
+  resize: none;
+  transition: all 0.2s;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.rejectTextarea:focus {
+  border-color: #fca5a5;
+}
+
+.rejectActions {
+  display: flex;
+  gap: 12px;
+}
+
+.btnCancel {
+  flex: 1;
+  padding: 12px 0;
+  border-radius: 14px;
+  background: #f3f4f6;
+  color: #6b7280;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btnCancel:hover {
+  background: #e5e7eb;
+}
+
+.btnRejectConfirm {
+  flex: 1;
+  padding: 12px 0;
+  border-radius: 14px;
+  background: #ef4444;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btnRejectConfirm:hover {
+  background: #dc2626;
+}
+
+.btnRejectConfirm:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

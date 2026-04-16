@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* A24 Regular font - loaded from Figma */
+@font-face {
+  font-family: 'A24';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local('A24 Regular'), local('A24-Regular');
+}

@@ -1,0 +1,770 @@
+/* MarketPage.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  position: relative;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.pageTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 42px;
+  line-height: 1;
+  color: #040055;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.pageTitleAccent {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  color: #0bf;
+  font-size: 52px;
+  text-transform: lowercase;
+}
+
+/* === Search === */
+.searchWrap {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 14px 40px 14px 44px;
+  background: #fff;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  outline: none;
+  font-size: 14px;
+  color: #040055;
+  font-weight: 600;
+  transition: all 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.searchInput:focus {
+  border-color: #1890ff;
+}
+
+.searchClear {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  transition: color 0.2s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.searchClear:hover {
+  color: #ef4444;
+}
+
+/* === Layout === */
+.layout {
+  display: flex;
+  gap: 24px;
+}
+
+/* === Sidebar === */
+.sidebar {
+  width: 270px;
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 24px;
+  padding: 24px;
+  align-self: flex-start;
+  position: sticky;
+  top: 80px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.sidebarTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.sidebarTitleText {
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 18px;
+  color: #040055;
+  margin: 0;
+}
+
+/* === Price filter === */
+.priceSection {
+  margin-bottom: 24px;
+}
+
+.filterLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+.priceInputs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.priceInputWrap {
+  flex: 1;
+}
+
+.priceInputLabel {
+  font-size: 10px;
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+.priceDash {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 8px;
+  color: #d1d5db;
+  font-weight: 700;
+}
+
+.filterInput {
+  width: 100%;
+  padding: 12px 16px;
+  background: #f8f9fb;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  outline: none;
+  font-size: 13px;
+  color: #040055;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+.filterInput:focus {
+  border-color: #1890ff;
+}
+
+.priceRange {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+}
+
+/* === Tags === */
+.tagsSection {
+  margin-bottom: 24px;
+}
+
+.tagsTitle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.tagsTitleText {
+  font-size: 12px;
+  font-weight: 700;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.tagsWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tagBtn {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.tagBtnActive {
+  composes: tagBtn;
+  background: #1890ff;
+  color: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.tagBtnInactive {
+  composes: tagBtn;
+  background: #f0f4f8;
+  color: #040055;
+}
+.tagBtnInactive:hover {
+  background: #e5f4fe;
+}
+
+.resetTagsBtn {
+  font-size: 11px;
+  color: #9ca3af;
+  font-weight: 600;
+  margin-top: 8px;
+  transition: color 0.2s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.resetTagsBtn:hover {
+  color: #ef4444;
+}
+
+.resetAllBtn {
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 12px;
+  background: #f0f4f8;
+  color: #040055;
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.resetAllBtn:hover {
+  background: #fef2f2;
+  color: #ef4444;
+}
+
+.foundCount {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.foundCountText {
+  font-size: 12px;
+  color: #9ca3af;
+  font-weight: 600;
+  margin: 0;
+}
+
+.foundCountNum {
+  color: #040055;
+  font-weight: 900;
+}
+
+/* === Product Grid === */
+.mainContent {
+  flex: 1;
+}
+
+.emptyState {
+  background: #fff;
+  border-radius: 24px;
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.emptyTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #d1d5db;
+  margin: 0;
+}
+
+.emptySubtitle {
+  font-size: 14px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* === Product Card === */
+.productCard {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s;
+}
+.productCard:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.cardImageBox {
+  width: 100%;
+  aspect-ratio: 4/5;
+  background: linear-gradient(to bottom, #f0f4f8, #e8edf5);
+  overflow: hidden;
+  position: relative;
+}
+
+.cardImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 8px;
+  transition: all 0.7s ease-in-out;
+}
+
+.cardImageActive {
+  composes: cardImage;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.cardImageHidden {
+  composes: cardImage;
+  opacity: 0;
+  transform: scale(1.04);
+}
+
+.salesBadge {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  z-index: 10;
+}
+
+.dots {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  display: flex;
+  gap: 4px;
+  z-index: 10;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.dotActive {
+  composes: dot;
+  background: #fff;
+  transform: scale(1.25);
+}
+
+.dotInactive {
+  composes: dot;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.cardInfo {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cardTitle {
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 14px;
+  color: #040055;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 2px;
+  margin-top: 0;
+}
+
+.cardAuthor {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-bottom: 4px;
+  margin-top: 0;
+}
+
+.cardTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.cardTag {
+  font-size: 10px;
+  font-weight: 700;
+  color: #1890ff;
+  background: #e5f4fe;
+  padding: 2px 6px;
+  border-radius: 999px;
+}
+
+.cardPrice {
+  font-family: 'Inter';
+  font-weight: 900;
+  font-size: 18px;
+  color: #040055;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+/* === Modal === */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  padding: 16px;
+}
+
+.modalContent {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 896px;
+  padding: 40px;
+  position: relative;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.modalClose {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 8px;
+  border-radius: 12px;
+  background: #f3f4f6;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.modalClose:hover {
+  background: #e5e7eb;
+}
+
+.modalLayout {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+}
+
+.modalRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.modalTitle {
+  font-weight: 900;
+  font-size: 32px;
+  color: #040055;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.modalMeta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.modalAuthor {
+  font-size: 14px;
+  font-weight: 700;
+  color: #6b7280;
+  margin: 0;
+}
+
+.modalAuthorName {
+  color: #1890ff;
+}
+
+.modalSalesBadge {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #fef3c7;
+  color: #b45309;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.modalTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.modalTag {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1890ff;
+  background: #e5f4fe;
+  padding: 4px 12px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.modalPrice {
+  font-weight: 900;
+  font-size: 42px;
+  color: #040055;
+  margin-bottom: 32px;
+  margin-top: 0;
+}
+
+.sizeLabel {
+  font-size: 13px;
+  font-weight: 700;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.sizeGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.sizeBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 900;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.sizeBtnActive {
+  composes: sizeBtn;
+  background: #040055;
+  color: #fff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.sizeBtnInactive {
+  composes: sizeBtn;
+  background: #f0f4f8;
+  color: #6b7280;
+}
+.sizeBtnInactive:hover {
+  background: #e5e7eb;
+}
+
+/* === Quantity + Add to cart === */
+.actionRow {
+  display: flex;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.quantityBox {
+  display: flex;
+  align-items: center;
+  background: #f0f4f8;
+  border-radius: 16px;
+  height: 56px;
+  padding: 4px;
+  flex-shrink: 0;
+  width: 144px;
+}
+
+.quantityBtn {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  border-radius: 12px;
+  transition: all 0.2s;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+}
+.quantityBtn:hover {
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.quantityValue {
+  flex: 1;
+  text-align: center;
+  font-weight: 900;
+  font-size: 18px;
+  color: #040055;
+}
+
+.addToCartBtn {
+  flex: 1;
+  height: 56px;
+  border-radius: 16px;
+  background: #1890ff;
+  color: #fff;
+  font-weight: 900;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.addToCartBtn:hover {
+  background: #40a9ff;
+  box-shadow: 0 8px 20px rgba(24, 144, 255, 0.3);
+  transform: translateY(-4px);
+}
+.addToCartBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* === Modal Image Slider === */
+.sliderWrap {
+  width: 400px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sliderMain {
+  aspect-ratio: 4/5;
+  background: linear-gradient(to bottom, #f0f4f8, #e8edf5);
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sliderImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 16px;
+  transition: all 0.5s ease-in-out;
+}
+
+.sliderImageActive {
+  composes: sliderImage;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.sliderImageHidden {
+  composes: sliderImage;
+  opacity: 0;
+  transform: scale(1.03);
+}
+
+.sliderThumbs {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.sliderThumb {
+  width: 64px;
+  height: 80px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+  padding: 0;
+}
+
+.sliderThumbActive {
+  composes: sliderThumb;
+  border: 2px solid #1890ff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.sliderThumbInactive {
+  composes: sliderThumb;
+  border: 2px solid transparent;
+  opacity: 0.6;
+}
+.sliderThumbInactive:hover {
+  opacity: 1;
+}
+
+.sliderThumbImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #f0f4f8;
+}

@@ -1,0 +1,500 @@
+/* SupportPage.module.css */
+
+.loading {
+  font-family: 'Inter', sans-serif;
+  color: #9ca3af;
+  text-align: center;
+  padding: 64px 0;
+}
+
+/* === Chat view === */
+.chatContainer {
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 200px);
+  min-height: 500px;
+}
+
+.chatHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.backBtn {
+  padding: 8px;
+  border-radius: 12px;
+  transition: background 0.2s;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+.backBtn:hover {
+  background: #f3f4f6;
+}
+
+.chatHeaderInfo {
+  flex: 1;
+}
+
+.chatSubject {
+  font-weight: 900;
+  font-size: 18px;
+  color: #040055;
+  margin: 0;
+}
+
+.chatStatus {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 0;
+  margin-top: 4px;
+}
+
+.chatBody {
+  flex: 1;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 2px 12px rgba(4, 0, 85, 0.05);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.messagesArea {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.messageRow {
+  display: flex;
+  gap: 12px;
+  max-width: 80%;
+}
+
+.messageRowUser {
+  composes: messageRow;
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.messageRowAdmin {
+  composes: messageRow;
+  align-self: flex-start;
+  flex-direction: row;
+}
+
+.messageAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.messageAvatarAdmin {
+  composes: messageAvatar;
+  background: #1a0533;
+}
+
+.messageAvatarUser {
+  composes: messageAvatar;
+  background: #dbeafe;
+}
+
+.messageAvatarText {
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.messageAvatarTextAdmin {
+  composes: messageAvatarText;
+  color: #d8b4fe;
+}
+
+.messageAvatarTextUser {
+  composes: messageAvatarText;
+  color: #3b82f6;
+}
+
+.messageBubbleUser {
+  border-radius: 16px;
+  padding: 12px 20px;
+  background: #3b82f6;
+  border-top-right-radius: 0;
+}
+
+.messageBubbleAdmin {
+  border-radius: 16px;
+  padding: 12px 20px;
+  background: #f8f9fb;
+  border-top-left-radius: 0;
+}
+
+.messageSenderUser {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  margin-top: 0;
+  color: #bfdbfe;
+}
+
+.messageSenderAdmin {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  margin-top: 0;
+  color: #6b7280;
+}
+
+.messageTextUser {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #fff;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.messageTextAdmin {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #040055;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.messageTimeUser {
+  font-size: 10px;
+  margin-top: 4px;
+  margin-bottom: 0;
+  color: #bfdbfe;
+}
+
+.messageTimeAdmin {
+  font-size: 10px;
+  margin-top: 4px;
+  margin-bottom: 0;
+  color: #d1d5db;
+}
+
+/* === Reply area === */
+.replyArea {
+  padding: 16px 24px;
+  border-top: 1px solid #f9fafb;
+}
+
+.replyRow {
+  display: flex;
+  gap: 12px;
+}
+
+.replyInput {
+  flex: 1;
+  padding: 12px 16px;
+  background: #f8f9fb;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  outline: none;
+  font-size: 14px;
+  color: #040055;
+  resize: none;
+  transition: all 0.2s;
+}
+.replyInput:focus {
+  border-color: #60a5fa;
+}
+
+.sendBtn {
+  align-self: flex-end;
+  padding: 12px 20px;
+  border-radius: 16px;
+  background: #3b82f6;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.sendBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+.sendBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* === Ticket list view === */
+.listContainer {
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.listHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.listTitle {
+  font-size: 28px;
+  font-weight: 900;
+  color: #040055;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  margin: 0;
+}
+
+.listSubtitle {
+  color: #9ca3af;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.newTicketBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 16px;
+  background: linear-gradient(to right, #040055, #667eea);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+}
+.newTicketBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* === Empty state === */
+.emptyState {
+  background: #fff;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 0;
+  box-shadow: 0px 2px 12px rgba(4, 0, 85, 0.05);
+}
+
+.emptyTitle {
+  font-weight: 900;
+  font-size: 18px;
+  color: #040055;
+  margin: 0;
+}
+
+.emptySubtitle {
+  color: #9ca3af;
+  font-size: 14px;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+/* === Ticket item === */
+.ticketItem {
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 2px 12px rgba(4, 0, 85, 0.05);
+  padding: 20px 24px;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+}
+.ticketItem:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.ticketRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.ticketLeft {
+  flex: 1;
+  min-width: 0;
+}
+
+.ticketTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.ticketSubject {
+  font-weight: 700;
+  font-size: 16px;
+  color: #040055;
+  margin: 0;
+}
+
+.ticketStatusBadge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.ticketStatusOpen {
+  composes: ticketStatusBadge;
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.ticketStatusClosed {
+  composes: ticketStatusBadge;
+  background: #f3f4f6;
+  color: #9ca3af;
+}
+
+.ticketLastMessage {
+  font-size: 13px;
+  color: #9ca3af;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.ticketRight {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.ticketDate {
+  font-size: 11px;
+  color: #d1d5db;
+  margin: 0;
+}
+
+.ticketMsgCount {
+  font-size: 11px;
+  color: #d1d5db;
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+
+/* === Create modal === */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.modalContent {
+  background: #fff;
+  border-radius: 24px;
+  padding: 32px;
+  max-width: 480px;
+  width: 100%;
+  margin: 0 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.modalTitle {
+  font-size: 22px;
+  font-weight: 900;
+  color: #040055;
+  margin: 0;
+}
+
+.modalFields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.modalInput {
+  width: 100%;
+  padding: 12px 16px;
+  background: #f8f9fb;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  outline: none;
+  font-size: 14px;
+  color: #040055;
+  transition: all 0.2s;
+}
+.modalInput:focus {
+  border-color: #60a5fa;
+}
+
+.modalTextarea {
+  composes: modalInput;
+  resize: none;
+}
+
+.modalBtns {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.modalCancelBtn {
+  flex: 1;
+  padding: 12px 0;
+  border-radius: 14px;
+  background: #f3f4f6;
+  color: #6b7280;
+  font-weight: 700;
+  transition: background 0.2s;
+  cursor: pointer;
+  border: none;
+}
+.modalCancelBtn:hover {
+  background: #e5e7eb;
+}
+
+.modalSubmitBtn {
+  flex: 1;
+  padding: 12px 0;
+  border-radius: 14px;
+  background: linear-gradient(to right, #040055, #667eea);
+  color: #fff;
+  font-weight: 700;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.modalSubmitBtn:hover:not(:disabled) {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.modalSubmitBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

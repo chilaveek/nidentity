@@ -1,0 +1,55 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.wrapperUser {
+  composes: wrapper;
+  background: #e5f4fe;
+}
+
+.wrapperAdmin {
+  composes: wrapper;
+  background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 50%, #f5f3ff 100%);
+}
+
+.wrapperAuthor {
+  composes: wrapper;
+  background: linear-gradient(135deg, #f0f7ff 0%, #e8f4f8 50%, #f0f7ff 100%);
+}
+
+.headerWrap {
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 16px;
+}
+
+.headerWrapCompact {
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 4px;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: 1376px;
+  padding: 0 16px;
+}
+
+.contentArea {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.mainWithSidebar {
+  flex: 1;
+  padding: 24px 32px 40px 32px;
+  min-width: 0;
+}

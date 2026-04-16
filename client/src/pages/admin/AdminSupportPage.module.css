@@ -1,0 +1,493 @@
+.container {
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 900;
+  color: #040055;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  margin: 0;
+}
+
+.subtitle {
+  color: #9ca3af;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 4px 0 0;
+}
+
+.subtitleAccent {
+  color: #8b5cf6;
+  font-weight: 700;
+}
+
+.loading {
+  color: #9ca3af;
+  text-align: center;
+  padding: 64px 0;
+}
+
+.mainLayout {
+  display: flex;
+  gap: 20px;
+  min-height: 600px;
+}
+
+/* Ticket list */
+.ticketList {
+  width: 300px;
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 2px 12px rgba(4,0,85,0.05);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.ticketListEmpty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d1d5db;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 24px;
+}
+
+.sectionLabel {
+  padding: 12px 20px;
+  border-bottom: 1px solid #f9fafb;
+}
+
+.sectionLabelText {
+  font-size: 11px;
+  font-weight: 900;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+.sectionLabelClosed {
+  composes: sectionLabel;
+  margin-top: 4px;
+}
+
+.ticketBtn {
+  width: 100%;
+  text-align: left;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f9fafb;
+  transition: background 0.2s;
+  cursor: pointer;
+  border: none;
+  border-left: 4px solid transparent;
+  background: transparent;
+}
+
+.ticketBtn:hover {
+  background: rgba(139,92,246,0.05);
+}
+
+.ticketBtnActiveOpen {
+  composes: ticketBtn;
+  background: #f5f3ff;
+  border-left-color: #a78bfa;
+}
+
+.ticketBtnActiveOpen:hover {
+  background: #f5f3ff;
+}
+
+.ticketBtnClosed {
+  composes: ticketBtn;
+  opacity: 0.6;
+}
+
+.ticketBtnClosed:hover {
+  background: #f9fafb;
+  opacity: 1;
+}
+
+.ticketBtnActiveClosed {
+  composes: ticketBtn;
+  background: #f9fafb;
+  border-left-color: #d1d5db;
+  opacity: 1;
+}
+
+.ticketHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.ticketSubject {
+  font-weight: 700;
+  font-size: 13px;
+  color: #040055;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.badgeOpen {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #fffbeb;
+  color: #d97706;
+  flex-shrink: 0;
+}
+
+.badgeClosed {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #f3f4f6;
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.ticketMeta {
+  font-size: 11px;
+  color: #9ca3af;
+  margin: 2px 0 0;
+}
+
+/* Conversation panel */
+.conversationPanel {
+  flex: 1;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 2px 12px rgba(4,0,85,0.05);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.convHeader {
+  padding: 20px 28px;
+  border-bottom: 1px solid #f9fafb;
+}
+
+.convHeaderInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.convSubject {
+  font-weight: 900;
+  font-size: 17px;
+  color: #040055;
+  margin: 0;
+}
+
+.convMeta {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 2px 0 0;
+}
+
+.convActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.closeTicketBtn {
+  font-size: 12px;
+  font-weight: 700;
+  color: #9ca3af;
+  background: #f9fafb;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.closeTicketBtn:hover {
+  background: #f3f4f6;
+}
+
+.closedBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #059669;
+  background: #ecfdf5;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+/* Appeal bar */
+.appealBar {
+  padding: 12px 28px;
+  border-bottom: 1px solid #f9fafb;
+  background: rgba(254,243,199,0.5);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.appealLabel {
+  font-size: 13px;
+  font-weight: 700;
+  color: #b45309;
+  flex: 1;
+}
+
+.appealResult {
+  font-size: 13px;
+  font-weight: 700;
+  color: #040055;
+}
+
+.btnApproveSmall {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  background: #10b981;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btnApproveSmall:hover {
+  background: #059669;
+}
+
+.btnApproveSmall:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btnRejectSmall {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btnRejectSmall:hover {
+  background: #dc2626;
+}
+
+.btnRejectSmall:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Messages */
+.messagesArea {
+  flex: 1;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.messageRow {
+  display: flex;
+  gap: 12px;
+  max-width: 80%;
+}
+
+.messageRowUser {
+  composes: messageRow;
+  align-self: flex-start;
+  flex-direction: row;
+}
+
+.messageRowAdmin {
+  composes: messageRow;
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.msgAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.msgAvatarUser {
+  composes: msgAvatar;
+  background: #ede9fe;
+}
+
+.msgAvatarAdmin {
+  composes: msgAvatar;
+  background: #1a0533;
+}
+
+.msgAvatarTextUser {
+  font-size: 12px;
+  font-weight: 900;
+  color: #8b5cf6;
+}
+
+.msgAvatarTextAdmin {
+  font-size: 12px;
+  font-weight: 900;
+  color: #d8b4fe;
+}
+
+.msgBubbleUser {
+  border-radius: 16px;
+  padding: 12px 20px;
+  background: #f8f9fb;
+  border-top-left-radius: 0;
+}
+
+.msgBubbleAdmin {
+  border-radius: 16px;
+  padding: 12px 20px;
+  background: linear-gradient(to bottom right, #1a0533, #4c0070);
+  border-top-right-radius: 0;
+}
+
+.msgSenderUser {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: #6b7280;
+}
+
+.msgSenderAdmin {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: #d8b4fe;
+}
+
+.msgTextUser {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #040055;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.msgTextAdmin {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #fff;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.msgTimeUser {
+  font-size: 10px;
+  margin: 4px 0 0;
+  color: #d1d5db;
+}
+
+.msgTimeAdmin {
+  font-size: 10px;
+  margin: 4px 0 0;
+  color: #c084fc;
+}
+
+/* Reply area */
+.replyArea {
+  padding: 20px 28px;
+  border-top: 1px solid #f9fafb;
+}
+
+.replyInner {
+  display: flex;
+  gap: 12px;
+}
+
+.replyTextarea {
+  flex: 1;
+  padding: 12px 16px;
+  background: #f8f9fb;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  outline: none;
+  font-size: 14px;
+  font-family: 'Inter';
+  color: #040055;
+  resize: none;
+  transition: all 0.2s;
+}
+
+.replyTextarea:focus {
+  border-color: #a78bfa;
+}
+
+.sendBtn {
+  align-self: flex-end;
+  padding: 12px 20px;
+  border-radius: 16px;
+  background: linear-gradient(to right, #1a0533, #4c0070);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.sendBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.sendBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Empty conversation */
+.emptyConversation {
+  flex: 1;
+  background: #fff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d1d5db;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0px 2px 12px rgba(4,0,85,0.05);
+}
